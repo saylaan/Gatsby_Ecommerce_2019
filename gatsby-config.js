@@ -3,10 +3,10 @@ module.exports = {
     // edit below
     title: `GatsbyVapo`,
     author: `HUCK Geoffroy & Arnaud Sebaa`,
-    description: `A site to sell some E-Cigarette product, made with Gatsby / GraphQL / React and NetlifyCMS `,
-    siteUrl: `gatsbyvapo.netlify.com`,
+    description: `A site to sell some E-Cigarette product, made with Gatsby / GraphQL / React and `,
+    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `TvVolki`,
+      twitter: `kylemathews`,
     },
   },
   plugins: [
