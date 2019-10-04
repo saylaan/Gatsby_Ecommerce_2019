@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Kyle Matthews`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `GatsbyVapo`,
+    author: `HUCK Geoffroy & Arnaud Sebaa`,
+    description: `A site to sell some E-Cigarette product, made with Gatsby / GraphQL / React and NetlifyCMS `,
+    siteUrl: `gatsbyvapo.netlify.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `TvVolki`,
     },
   },
   plugins: [
@@ -17,6 +17,12 @@ module.exports = {
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-149408830-1",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
