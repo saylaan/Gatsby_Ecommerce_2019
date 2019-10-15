@@ -1,0 +1,27 @@
+[
+    {
+        "type": "homepage",
+        "path": "none",
+        "component": "none"
+    },
+    {
+        "type": "shop",
+        "path": "none",
+        "component": "none"
+    },
+    {
+        "type": "nav",
+        "path": "none",
+        "component": "none"
+    },
+    {
+        "type": "aside",
+        "path": "none",
+        "component": "none"
+    },
+    {
+        "type": "footer",
+        "path": "none",
+        "component": "none"
+    }
+]

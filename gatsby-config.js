@@ -1,13 +1,9 @@
 module.exports = {
   siteMetadata: {
-    // edit below
-    title: `GatsbyVapo`,
+    title: `GatsbyCommerce`,
     author: `HUCK Geoffroy & Arnaud Sebaa`,
-    description: `A site to sell some E-Cigarette product, made with Gatsby / GraphQL / React and `,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `A site to sell product depending on the client demand, here one exemple with E-Cigarette & E-Liquid`,
+    siteUrl: `https://gatsbycommerce.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -18,6 +14,12 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: `json`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-149408830-1",
@@ -26,15 +28,21 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/shop/`,
         name: `blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/content/assets/`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/config/`,
       },
     },
     {
@@ -57,13 +65,6 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
     {

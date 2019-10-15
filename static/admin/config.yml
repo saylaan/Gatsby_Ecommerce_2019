@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: saylaan/GatsbyVapo_2019
+  repo: saylaan/GatsbyCommerce_2019
 
 publish_mode: editorial_workflow
 
@@ -8,13 +8,17 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - name: shop
+    label: Shop
+    folder: content/shop
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
+      - { name: date, label: Date, widget: date, required: true }
+      - { name: title, label: Title, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: false }
+      - { name: name, label: Name, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: true }
+      - { name: categorie, label: Categorie, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: true }
+      - { name: description, label: Description, widget: text, required: true }
+      - { name: path, label: Path, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: true}
+      - { name: gallery, label: Gallery, widget: list, required: true, field: {name: image, label: Image, widget: image, required: true } }
+      - { name: body, label: Body, widget: markdown, required: false }
+        
