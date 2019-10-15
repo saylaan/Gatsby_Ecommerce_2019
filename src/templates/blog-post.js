@@ -18,7 +18,7 @@ class BlogPostTemplate extends React.Component {
                         <h5 class="card-title text-center mt-4" style={{fontSize: "30px"}}>{post.frontmatter.name}</h5>
                         <h5 class="card-title text-center" style={{fontSize: "25px"}}>{post.frontmatter.title}</h5>
                         <p class="mt-5 mb-5" style={{fontSize: "50px"}}>{post.frontmatter.price + " €"}</p>
-                        <a class="btn btn-lg btn-danger">Acheter <span class="glyphicon glyphicon-euro"></span></a>
+                        <button class="btn btn-lg btn-danger">Acheter <span class="glyphicon glyphicon-euro"></span></button>
                     </div>
                     <div class="col-md-12 text-center" style={{fontSize: "22px"}}>
                     <p>{post.frontmatter.description}</p>
