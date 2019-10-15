@@ -14,11 +14,12 @@ collections:
     create: true
     fields:
       - { name: date, label: Date, widget: date, required: true }
-      - { name: title, label: Title, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: false }
-      - { name: name, label: Name, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: true }
-      - { name: categorie, label: Categorie, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: true }
+      - { name: title, label: Title, widget: string, required: false }
+      - { name: name, label: Name, widget: string, required: true }
+      - { name: categorie, label: Categorie, widget: string, required: true }
       - { name: description, label: Description, widget: text, required: true }
-      - { name: path, label: Path, widget: string, pattern: [".{30,}", "Must have at least 12 characters"], required: true}
+      - { name: price, label: Price, widget: number, default: 0, valueType: float }
+      - { name: itemcount, label: ItemCount, widget: number, default: 100, valueType: int }
+      - { name: path, label: Path, widget: string, required: true}
       - { name: gallery, label: Gallery, widget: list, required: true, field: {name: image, label: Image, widget: image, required: true } }
       - { name: body, label: Body, widget: markdown, required: false }
-        
