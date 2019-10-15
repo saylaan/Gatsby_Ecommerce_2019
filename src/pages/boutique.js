@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -31,15 +30,6 @@ class Blog extends React.Component {
                             <li data-target={"#id" + node.frontmatter.id} data-slide-to="2"></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                            <Img fluid={node.frontmatter.image1.childImageSharp.fluid} class="card-img d-block w-100"/>                      
-                            </div>
-                            <div class="carousel-item">
-                            <Img fluid={node.frontmatter.image2.childImageSharp.fluid} class="card-img d-block w-100" />                                            
-                            </div>
-                            <div class="carousel-item">
-                            <Img fluid={node.frontmatter.image3.childImageSharp.fluid} class="card-img d-block w-100" />                      
-                            </div>
                         </div>
                         <a class="carousel-control-prev" href={"#id" + node.frontmatter.id} role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -95,29 +85,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            id
             price
-            image1 {
-              childImageSharp {
-                  fluid(maxWidth: 1500, maxHeight: 1500 ) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
-            }
-            image2 {
-              childImageSharp {
-                  fluid(maxWidth: 1000, maxHeight: 1000 ) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
-            }
-            image3 {
-              childImageSharp {
-                  fluid(maxWidth: 1000, maxHeight: 1000 ) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
-            }
           }
         }
       }
