@@ -14,6 +14,13 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
+			resolve: 'gatsby-plugin-snipcart',
+			options: {
+        apiKey: 'test',
+        autopop: true,
+			}
+		},
+    {
       resolve: `gatsby-plugin-netlify-cms-paths`,
       options: {
         cmsConfig: `/static/admin/config.yml`
