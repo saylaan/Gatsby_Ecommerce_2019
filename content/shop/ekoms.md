@@ -14,7 +14,7 @@ description: >-
   Ratio PG/VG 35/65
 price: 19.85
 itemcount: 100
-path: /shop/E-Cigarette/two
+path: /shop/E-Cigarette/two/
 gallery:
   - /assets/liquide2.jpg
 ---
