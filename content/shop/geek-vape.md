@@ -15,7 +15,9 @@ description: >-
   protégé contre la poussière et permet l'immersion temporaire.
 price: 95.85
 itemcount: 100
-path: /shop/E-Cigarette/one/
+path: /shop
+gallery:
+  - /assets/cigarette1.jpg
 ---
 GeekVape continue de nous bluffer son Kit Aegis X ! Issu de la longue lignée Aegis anti-choc, anti-poussière et waterproof, le Kit Aegis X se dote d'un grand écran couleur de 2,4 pouces ! Fonctionnant avec deux accus 18650 (non fourni) et un chipset AS 2.0, le mod Aegis X dispose d'une excellente puissance de vape jusqu'à 200W. Côté affichage, la Aegis X se veut pratique et personnalisable grâce à 3 thèmes et 5 couleurs au choix. Et puisqu'on ne change pas une équipe qui gagne, c'est le clearomiseur Cerberus qui accompagne le mod Aegis X dans sa version kit. Conçu pour le subohm, ce grand clearo de 27mm de diamètre et 5,5ml de contenance fonctionne avec des résistances Mesh ultra-performantes !
 
