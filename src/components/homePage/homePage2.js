@@ -1,12 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
-import $ from 'jquery'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { rhythm, scale } from "../../utils/typography"
+import { rhythm } from "../../utils/typography"
 import Header from "../header2"
 
 
