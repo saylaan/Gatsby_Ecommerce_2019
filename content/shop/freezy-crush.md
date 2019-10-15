@@ -15,7 +15,7 @@ description: >-
   Ratio PG/VG: 50/50 
 price: 18.9
 itemcount: 100
-path: /shop/e-liquide/one/
+path: /shop
 gallery:
   - /assets/liquide1.jpg
 ---
