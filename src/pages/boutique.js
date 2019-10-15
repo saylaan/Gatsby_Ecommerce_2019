@@ -16,52 +16,32 @@ class Blog extends React.Component {
     const postList = data.allMarkdownRemark;
 
     return (
-        <Boutique2>
-            <SEO title="All posts" />
-            <div class="d-flex p-3 bg-secondary lign-content-start flex-wrap justify-content-around">
+      <Boutique2>
+          <SEO title="All posts" />
+          <div class="d-flex p-3 bg-secondary lign-content-start flex-wrap justify-content-around">
             {postList.edges.map(({ node }, i) => (
-                <div class="card mb-3" style={{maxWidth: 800, width:800, marginTop: 30}}>
+                <div class="card mb-3" style={{maxWidth: 600, width:600, marginTop: 30, marginRight: 30}}>
                     <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <div id={"id" + node.frontmatter.id} class="carousel slide carousel-fade" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target={"#id" + node.frontmatter.id} data-slide-to="0" class="active"></li>
-                            <li data-target={"#id" + node.frontmatter.id} data-slide-to="1"></li>
-                            <li data-target={"#id" + node.frontmatter.id} data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                        </div>
-                        <a class="carousel-control-prev" href={"#id" + node.frontmatter.id} role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href={"#id" + node.frontmatter.id} role="button" data-slide="next" >                  
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        </div>
+                      <div class="col-md-5">
+                        <img src={node.frontmatter.gallery}/>
+                          <div class="card-body">
+                          <Link to={"blog/" + node.fields.slug} key={i} className="link" >
+                            <h5 class="card-title text-center">{node.frontmatter.name} {node.frontmatter.id}</h5>
+                          </Link>
+                          </div>
+                      </div>
                     </div>
                     <div class="col-md-7">
                         <div class="price text-center pt-5">
                             <p style={{fontSize: "50px"}}>{node.frontmatter.price + " €"}</p>
-                            <input type="number" value="0" min="0" max="1000" step="1"/>
                             <a href="#" class="btn btn-lg btn-danger">Acheter <span class="glyphicon glyphicon-euro"></span></a>
                         </div>
-                        
                     </div>
-                    <div class="col-md-5">
-                    <div class="card-body">
-                        <Link to={"blog/" + node.fields.slug} key={i} className="link" >
-                            <h5 class="card-title text-center">{node.frontmatter.title} {node.frontmatter.id}</h5>
-                        </Link>
-                    </div>
-                    </div>
-                </div>
                 </div>
             ))}
             </div>
-        </Boutique2>
-        )
+      </Boutique2>
+      )
     }
 }
 
@@ -84,8 +64,10 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            name
             description
             price
+            gallery
           }
         }
       }

@@ -13,7 +13,7 @@ description: >-
 
 
   Ratio PG/VG: 50/50 
-price: 18.9
+price: 18.90
 itemcount: 100
 path: /shop
 gallery:
