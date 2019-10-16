@@ -2,9 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 import NavBar from "./navBar"
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min'
-
 
 class Layout extends React.Component {
   	render() {
