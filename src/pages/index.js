@@ -3,6 +3,7 @@ import Image from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class IndexPage extends React.Component {
   	render() {
