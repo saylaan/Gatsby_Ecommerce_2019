@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Boutique2 from "../components/boutique/boutique2"
+import { Button } from 'react-bootstrap';
 
 
 class Blog extends React.Component {
@@ -28,7 +29,7 @@ class Blog extends React.Component {
                         <div class="price text-center pt-2">
                             <p style={{fontSize: "50px"}}>{node.frontmatter.price + " €"}</p>
                             <Link to={"shop/" + node.fields.slug} key={i} className="link" >
-                              <div class="btn btn-lg btn-danger mt-2">Acheter <span class="glyphicon glyphicon-euro"></span></div>
+                              <Button>Acheter</Button>
                             </Link>
                         </div>
                     </div>
