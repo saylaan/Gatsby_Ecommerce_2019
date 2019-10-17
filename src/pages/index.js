@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
 				<Wrapper>
 				<h1 class="text-center mb-5 font-weight-bold font-italic">{node.frontmatter.title}</h1><br/>
 					<Container class="d-flex justify-content-start">
-						<img src={node.frontmatter.gallery} alt="" style={{ width: "500px", marginLeft: `100px`, marginRight: `100px`,}}/>
+						<img src={node.frontmatter.gallery} alt="" style={{ marginLeft: `100px`, marginRight: `100px`,}}/>
 						<p style={{fontSize: `30px`,}}>
 							{node.frontmatter.description}
 						</p>
