@@ -1,9 +1,7 @@
 ---
 title: GatsbyCommerce
-name: GatsbyCommerce
-description: >-
-  Gatsby is a free and open source framework based on React that helps
-  developers build blazing fast websites and apps
+name: gatsbycommerce
+description: ' Adipisicing mollit pariatur culpa fugiat id anim laboris sint nulla. Veniam qui nostrud eu et veniam ea enim enim. Qui deserunt consequat anim sint consequat nisi ad labore irure minim tempor occaecat est officia. Minim consequat adipisicing in ea pariatur tempor pariatur id nulla cillum.'
 path: /homePage
 gallery:
   - /assets/gatsby-icon.png
