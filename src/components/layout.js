@@ -10,7 +10,7 @@ class Layout extends React.Component {
     	return (
 			<Wrapper>
 				<NavBar/>
-				<div style={{marginLeft: `auto`,display: 'inline-block',marginRight: `auto`,width: '100%',padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, }}>
+				<div style={{marginLeft: `auto`,marginRight: `auto`,width: '100%', height: "auto", padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, }}>
 					<main>{children}</main>
 				</div>
 			</Wrapper>
@@ -19,7 +19,9 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+	min-height: 100vh;
+	aligne-item: center;
+	background-color: #EFEFEF;
 `
 
 export default Layout

@@ -8,53 +8,53 @@ import NavLink from "react-bootstrap/NavLink"
 class NavBar extends React.Component {
 	render() {
 		let header
-		header = (
-			<Wrapper>
-				<StaticQuery
-				query={navBarQuery}
-					render={data => {
-						return(
-							<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-								{data.logo2.edges.map(({ node }, i) => (
-									<Navbar.Brand  href="/" style={{ textDecoration: "none"}}>
-										<img src={node.frontmatter.gallery} alt="" style={{ width: "50px", height: "50px"}}/>
-									</Navbar.Brand>
-								))}
-								<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-								<Navbar.Collapse id="responsive-navbar-nav">
-									<Nav className="mr-auto ml-4" style={{fontSize: "22px"}}>
-										<Nav.Link className="mr-4 text-center" href="/">Home</Nav.Link>
-										<Nav.Link className="text-center" href="/boutique">Boutique</Nav.Link>	
-									</Nav>
-									<Nav className="text-center ">
-										<Nav.Link to="/connection" activeClassName="active" style={{ textDecoration: "none"}}>
-											<Col className="show-grid">
-												<Row>
-													<Image className="rounded mx-auto d-block" fixed={data.connection.childImageSharp.fixed} />
-												</Row>
-												<Row className="row justify-content-center">
-													Connection
-												</Row>
-											</Col>
-										</Nav.Link>
-										<NavLink style={{ textDecoration: "none"}}> 
-											<Col  className="show-grid text-center">
-												<Row>
-													<Image className="rounded mx-auto d-block" fixed={data.panier.childImageSharp.fixed} />
-												</Row>
-												<Row className="row justify-content-center">
-													Panier
-												</Row>
-											</Col>
-										</NavLink>
-									</Nav>
-								</Navbar.Collapse>
-						  </Navbar>
-						)
-					}}
-				/>
-			</Wrapper>
-		)
+			header = (
+				<Wrapper >
+					<StaticQuery
+					query={navBarQuery}
+						render={data => {
+							return(
+								<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+									{data.logo2.edges.map(({ node }, i) => (
+										<Navbar.Brand  href="/" style={{ textDecoration: "none"}}>
+											<img src={node.frontmatter.gallery} alt="" style={{ width: "50px", height: "50px"}}/>
+										</Navbar.Brand>
+									))}
+									<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+									<Navbar.Collapse id="responsive-navbar-nav">
+										<Nav className="mr-auto ml-4" style={{fontSize: "22px"}}>
+											<Nav.Link className="mr-4 text-center" href="/">Home</Nav.Link>
+											<Nav.Link className="text-center" href="/boutique">Boutique</Nav.Link>	
+										</Nav>
+										<Nav className="text-center ">
+											<Nav.Link to="/connection" activeClassName="active" style={{ textDecoration: "none"}}>
+												<Col className="show-grid">
+													<Row>
+														<Image className="rounded mx-auto d-block" fixed={data.connection.childImageSharp.fixed} />
+													</Row>
+													<Row className="row justify-content-center">
+														Connection
+													</Row>
+												</Col>
+											</Nav.Link>
+											<NavLink style={{ textDecoration: "none"}}> 
+												<Col  className="show-grid text-center">
+													<Row>
+														<Image className="rounded mx-auto d-block" fixed={data.panier.childImageSharp.fixed} />
+													</Row>
+													<Row className="row justify-content-center">
+														Panier
+													</Row>
+												</Col>
+											</NavLink>
+										</Nav>
+									</Navbar.Collapse>
+							</Navbar>
+							)
+						}}
+					/>
+				</Wrapper>
+			)
 		return (
 			<header>{header}</header>
 		)
@@ -62,7 +62,7 @@ class NavBar extends React.Component {
 }
 
 const Wrapper = styled.div`
-  height: auto;
+	  height: auto;
 `
 
 const navBarQuery = graphql`
