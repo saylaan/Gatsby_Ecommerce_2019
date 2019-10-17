@@ -20,9 +20,11 @@ gallery:
 ---
 ATTENTION : ce produit n’est pas fourni avec un booster.
 
-\- Pour obtenir votre e-liquide dosé en 0mg/ml, pas besoin de booster, le eliquide peut se vapoter seul.\
-- Pour obtenir votre e-liquide dosé en 3mg/ml, ajoutez 1 booster de 20mg/ml.\
-- Pour obtenir votre e-liquide dosé en 6mg/ml, ajoutez 2 boosters de 20mg/ml.
+\- Pour obtenir votre e-liquide dosé en 0mg/ml, pas besoin de booster, le eliquide peut se vapoter seul.
+
+\- Pour obtenir votre e-liquide dosé en 3mg/ml, ajoutez 1 booster de 20mg/ml.
+
+\- Pour obtenir votre e-liquide dosé en 6mg/ml, ajoutez 2 boosters de 20mg/ml.
 
 Tous nos boosters disponibles, ICI
 
