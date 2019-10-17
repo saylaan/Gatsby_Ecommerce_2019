@@ -24,7 +24,7 @@ class Boutique extends React.Component {
 										<Card.Text className="text-center mt-5 mb-5" style={{fontSize: "30px"}}>
 											{node.frontmatter.price + " €"}
 										</Card.Text>
-										<Button href={"shop" + node.fields.slug} className="mr-3" style={{fontSize: "25px"}} variant="primary">Détaille</Button>
+										<Button href={"shop" + node.fields.slug} className="mr-3" style={{fontSize: "25px"}} variant="primary">Détails</Button>
 										<Button style={{fontSize: "25px"}} variant="danger">Acheter</Button>
 									</Card.Body>
 								</Col>
