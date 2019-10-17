@@ -7,12 +7,12 @@ import Data from "./data"
 
 let ThemeData = Data.Theme;
 
-class Item extends React.Component {
+class Shop extends React.Component {
   	render() {
 		let theme
 		const { data } = this.props
 		const postList = data.allMarkdownRemark;
-		if (ThemeData == "theme1" || ThemeData == "theme4") {
+		if (ThemeData === "theme1" || ThemeData === "theme4") {
 			theme = (
 				<CardGroup class="d-flex p-3 bg-secondary lign-content-start flex-wrap justify-content-around">
 					{postList.edges.map(({ node }, i) => (
@@ -39,7 +39,7 @@ class Item extends React.Component {
 					))}
 				</CardGroup>
 			)
-		} else if (ThemeData == "theme2" || ThemeData == "theme3") {
+		} else if (ThemeData === "theme2" || ThemeData === "theme3") {
 			theme = (
 				<Wrapper style={{marginTop: "150px"}}>
 					<style> {`
@@ -96,7 +96,7 @@ const Wrapper = styled.div`
 	text-align: center;  
 `
 
-export default Boutique
+export default Shop
 
 export const pageQuery = graphql`
 	query {

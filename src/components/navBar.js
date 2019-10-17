@@ -24,7 +24,7 @@ class NavBar extends React.Component {
 									<Navbar.Collapse id="responsive-navbar-nav">
 										<Nav className="mr-auto ml-4" style={{fontSize: "22px"}}>
 											<Nav.Link className="mr-4 text-center" href="/">Home</Nav.Link>
-											<Nav.Link className="text-center" href="/boutique">Shop</Nav.Link>	
+											<Nav.Link className="text-center" href="/shop">Shop</Nav.Link>	
 										</Nav>
 										<Nav className="text-center ">
 											<Nav.Link to="/connection" activeClassName="active" style={{ textDecoration: "none"}}>

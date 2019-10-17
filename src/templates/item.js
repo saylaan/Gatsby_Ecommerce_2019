@@ -11,7 +11,7 @@ class Item extends React.Component {
   	render() {
 		let theme
 		const post = this.props.data.markdownRemark
-		if (ThemeData == "theme1" || ThemeData == "theme4") {
+		if (ThemeData === "theme1" || ThemeData === "theme4") {
 			theme = (
 				<Card class="card mb-3" style={{maxWidth: 800, width:800, marginTop: 30, marginRight: 30, margin: "0 auto", float: "none",}}>
 					<Row>
@@ -40,7 +40,7 @@ class Item extends React.Component {
 					</Card.Text>
 				</Card>
 			)
-		} else if (ThemeData == "theme2" || ThemeData == "theme3"){
+		} else if (ThemeData === "theme2" || ThemeData === "theme3"){
 			theme = (
 				<Card className="bg-dark text-white">
 					<Card.Img src={post.frontmatter.gallery} style={{width: "400px", margin: "20px"}}alt="Card image" />

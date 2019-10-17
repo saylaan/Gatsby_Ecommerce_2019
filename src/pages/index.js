@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Data from "./data"
 
 const ThemeData = Data.Theme;
@@ -11,7 +12,7 @@ class IndexPage extends React.Component {
 		let theme
 		const { data } = this.props
 		const postList = data.allMarkdownRemark
-		if (ThemeData == "theme1" || ThemeData == "theme3") {
+		if (ThemeData === "theme1" || ThemeData === "theme3") {
 			theme = (
 				<Wrapper style={{marginBottom: "100px", marginTop: '80px'}}>
 					{postList.edges.map(({ node }, i) => (
@@ -27,7 +28,7 @@ class IndexPage extends React.Component {
 					))}
 				</Wrapper>	
 			)
-		} else if (ThemeData == "theme2" || ThemeData == "theme4"){
+		} else if (ThemeData === "theme2" || ThemeData === "theme4"){
 			theme = (
 				<Wrapper>
 					{postList.edges.map(({ node }, i) => (
@@ -45,6 +46,7 @@ class IndexPage extends React.Component {
 	
     	return (
         	<Layout>
+				<p> {ThemeData}</p>
 				<div>{theme}</div>
 			</Layout>     
     	)
