@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Card, Button, Col, Row } from "react-bootstrap"
 
-class Article extends React.Component {
+class Item extends React.Component {
   	render() {
 		const post = this.props.data.markdownRemark
 		return (
@@ -40,10 +40,10 @@ class Article extends React.Component {
   	}
 }
 
-export default Article
+export default Item
 
-export const pageQuery = graphql`
-	query PostQuery($slug: String!) {
+export const query = graphql`
+	query ($slug: String!) {
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 			excerpt

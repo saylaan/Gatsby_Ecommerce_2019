@@ -24,7 +24,7 @@ class NavBar extends React.Component {
 								<Navbar.Collapse id="responsive-navbar-nav">
 									<Nav className="mr-auto ml-4" style={{fontSize: "22px"}}>
 										<Nav.Link className="mr-4 text-center" href="/">Home</Nav.Link>
-										<Nav.Link className="text-center" href="/boutique">Boutique</Nav.Link>	
+										<Nav.Link className="text-center" href="/shop">Shop</Nav.Link>	
 									</Nav>
 									<Nav className="text-center ">
 										<Nav.Link to="/connection" activeClassName="active" style={{ textDecoration: "none"}}>
@@ -65,7 +65,7 @@ const Wrapper = styled.div`
   height: auto;
 `
 
-const navBarQuery = graphql`
+export const navBarQuery = graphql`
 	query navBar {
 		logo: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
 			childImageSharp {

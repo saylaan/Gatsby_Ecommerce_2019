@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class IndexPage extends React.Component {
   	render() {
@@ -10,8 +9,7 @@ class IndexPage extends React.Component {
 		const postList = data.allMarkdownRemark;
     	return (
         	<Layout>
-				{postList.edges.map(({ node }, i) => (
-
+				{postList.edges.map(({ node }) => (
 				<Wrapper>
 				<h1 class="text-center mb-5 font-weight-bold font-italic">{node.frontmatter.title}</h1><br/>
 					<Container class="d-flex justify-content-start">
@@ -21,7 +19,6 @@ class IndexPage extends React.Component {
 						</p>
 					</Container>
 				</Wrapper>
-					
 				))}
 			</Layout>     
     	)

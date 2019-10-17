@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Card, Button, CardGroup, Col, Row } from "react-bootstrap"
 
-class Boutique extends React.Component {
+class Item extends React.Component {
   	render() {
 		const { data } = this.props
 		const postList = data.allMarkdownRemark;
@@ -38,7 +38,7 @@ class Boutique extends React.Component {
     }
 }
 
-export default Boutique
+export default Item
 
 export const pageQuery = graphql`
 	query {
