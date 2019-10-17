@@ -15,17 +15,19 @@ class NavBar extends React.Component {
 					render={data => {
 						return(
 							<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-								<Navbar.Brand href="/">
-									<Image fixed={data.logo.childImageSharp.fixed} />
-								</Navbar.Brand>
+								{data.logo2.edges.map(({ node }, i) => (
+									<Navbar.Brand  href="/" style={{ textDecoration: "none"}}>
+										<img src={node.frontmatter.gallery} alt="" style={{ width: "50px", height: "50px"}}/>
+									</Navbar.Brand>
+								))}
 								<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 								<Navbar.Collapse id="responsive-navbar-nav">
 									<Nav className="mr-auto ml-4" style={{fontSize: "22px"}}>
 										<Nav.Link className="mr-4 text-center" href="/">Home</Nav.Link>
 										<Nav.Link className="text-center" href="/boutique">Boutique</Nav.Link>	
 									</Nav>
-									<Nav className="text-center mr-5 ">
-										<Nav.Link to="/connection" activeClassName="active">
+									<Nav className="text-center ">
+										<Nav.Link to="/connection" activeClassName="active" style={{ textDecoration: "none"}}>
 											<Col className="show-grid">
 												<Row>
 													<Image className="rounded mx-auto d-block" fixed={data.connection.childImageSharp.fixed} />
@@ -35,7 +37,7 @@ class NavBar extends React.Component {
 												</Row>
 											</Col>
 										</Nav.Link>
-										<NavLink> 
+										<NavLink style={{ textDecoration: "none"}}> 
 											<Col  className="show-grid text-center">
 												<Row>
 													<Image className="rounded mx-auto d-block" fixed={data.panier.childImageSharp.fixed} />
@@ -83,6 +85,21 @@ const navBarQuery = graphql`
 			childImageSharp {
 				fixed(width: 50, height: 50) {
 					...GatsbyImageSharpFixed
+				}
+			}
+		}
+		logo2: allMarkdownRemark(
+			sort: { order: DESC, fields: [frontmatter___date]},
+			filter: { fileAbsolutePath: {regex : "\/homePage/"} },		) {
+			edges {
+				node {
+					excerpt(pruneLength: 250)
+					id
+					frontmatter {
+						title
+						gallery
+						description
+					}
 				}
 			}
 		}
