@@ -1,6 +1,7 @@
 ---
 date: 2019-10-15T15:38:27.487Z
 title: Freezy crush
+id: 2
 name: Paloma 50ml
 categorie: E-Liquide
 description: >-
