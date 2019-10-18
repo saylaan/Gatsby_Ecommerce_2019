@@ -1,6 +1,7 @@
 ---
 date: 2019-10-15T15:45:41.313Z
 title: Geek vape
+id: 3
 name: Kit Aegis X
 categorie: E-Cigarette
 description: >-
