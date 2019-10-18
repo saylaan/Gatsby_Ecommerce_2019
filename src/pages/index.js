@@ -5,48 +5,49 @@ import styled from "styled-components"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Data from "./data"
 
-const ThemeData = Data.Theme;
+const ThemeData = JSON.stringify(Data.Theme);
 
 class IndexPage extends React.Component {
   	render() {
 		let theme
 		const { data } = this.props
 		const postList = data.allMarkdownRemark
-		if (ThemeData === "theme1" || ThemeData === "theme3") {
-			theme = (
-				<Wrapper style={{marginBottom: "100px", marginTop: '80px'}}>
-					{postList.edges.map(({ node }, i) => (
-						<Wrapper>
-							<h1 class="text-center mb-5 font-weight-bold font-italic">{node.frontmatter.title}</h1><br/>
-							<Container class="d-flex justify-content-start">
-								<img src={node.frontmatter.gallery} alt="" style={{ width: "1000px", marginLeft: `100px`, marginRight: `100px`,}}/>
+		JSON.parse(ThemeData, (key, value) => {
+			if (value === "theme1" || value === "theme3") {
+				theme = (
+					<Wrapper style={{marginBottom: "100px", marginTop: '80px'}}>
+						{postList.edges.map(({ node }, i) => (
+							<Wrapper>
+								<h1 class="text-center mb-5 font-weight-bold font-italic">{node.frontmatter.title}</h1><br/>
+								<Container class="d-flex justify-content-start">
+									<img src={node.frontmatter.gallery} alt="" style={{ width: "1000px", marginLeft: `100px`, marginRight: `100px`,}}/>
+									<p style={{fontSize: `30px`,}}>
+										{node.frontmatter.description}
+									</p>
+								</Container>
+							</Wrapper>					
+						))}
+					</Wrapper>	
+				)
+			} else if (value === "theme2" || value === "theme4"){
+				theme = (
+					<Wrapper>
+						{postList.edges.map(({ node }, i) => (
+							<Wrapper >
+								<img src={node.frontmatter.gallery} alt="" style={{ width: "300px", marginLeft: `100px`, marginRight: `100px`,}}/>
+								<h1 class="text-center mb-5 font-weight-bold font-italic">{node.frontmatter.title}</h1><br/>
 								<p style={{fontSize: `30px`,}}>
 									{node.frontmatter.description}
 								</p>
-							</Container>
-						</Wrapper>					
-					))}
-				</Wrapper>	
-			)
-		} else if (ThemeData === "theme2" || ThemeData === "theme4"){
-			theme = (
-				<Wrapper>
-					{postList.edges.map(({ node }, i) => (
-						<Wrapper >
-							<img src={node.frontmatter.gallery} alt="" style={{ width: "300px", marginLeft: `100px`, marginRight: `100px`,}}/>
-							<h1 class="text-center mb-5 font-weight-bold font-italic">{node.frontmatter.title}</h1><br/>
-							<p style={{fontSize: `30px`,}}>
-								{node.frontmatter.description}
-							</p>
-						</Wrapper>
-					))}
-				</Wrapper>	
-			)
-		}
+							</Wrapper>
+						))}
+					</Wrapper>	
+				)
+			}
+		})
 	
     	return (
         	<Layout>
-				<p> {ThemeData}</p>
 				<div>{theme}</div>
 			</Layout>     
     	)

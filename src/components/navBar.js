@@ -67,13 +67,6 @@ const Wrapper = styled.div`
 
 export const navBarQuery = graphql`
 	query navBar {
-		logo: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
-			childImageSharp {
-				fixed(width: 50, height: 50) {
-					...GatsbyImageSharpFixed
-				}
-			}
-		}
 		panier: file(absolutePath: { regex: "/panier.png/" }) {
 			childImageSharp {
 				fixed(width: 50, height: 50) {
