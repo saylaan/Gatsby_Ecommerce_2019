@@ -34,7 +34,7 @@ class NavBar extends React.Component {
 		}
 	}
 
-	componentWillUnmount() {
+	UNSAFE_componentWillMount() {
 		window.Snipcart.unsubscribe('cart.closed');
 		window.Snipcart.unsubscribe('cart.ready');
 	}
