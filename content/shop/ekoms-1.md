@@ -1,6 +1,7 @@
 ---
 date: 2019-10-15T15:53:50.237Z
 title: Ekoms
+id: 1
 name: The Punk Badger
 categorie: E-Liquide
 description: >-
