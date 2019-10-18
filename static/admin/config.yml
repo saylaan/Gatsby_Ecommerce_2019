@@ -15,6 +15,7 @@ collections:
     fields:
       - { name: date, label: Date, widget: date, required: true }
       - { name: title, label: Title, widget: string, required: false }
+      - { name: id, label: Id, widget: number, required: true, valueType: int }
       - { name: name, label: Name, widget: string, required: true }
       - { name: categorie, label: Categorie, widget: string, required: true }
       - { name: description, label: Description, widget: text, required: true }

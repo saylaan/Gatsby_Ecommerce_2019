@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { rhythm } from "../utils/typography"
 import NavBar from "./navBar"
 import Seo from "./seo"
+import Footer from "./footer"
 
 class Layout extends React.Component {
   	render() {
@@ -14,6 +15,7 @@ class Layout extends React.Component {
 				<div style={{marginLeft: `auto`,marginRight: `auto`,width: '100%', height: "auto", padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, }}>
 					<main>{children}</main>
 				</div>
+				<Footer />
 			</Wrapper>
     	)
   	}

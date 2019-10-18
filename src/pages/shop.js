@@ -31,7 +31,17 @@ class Shop extends React.Component {
 												{node.frontmatter.price + " €"}
 											</Card.Text>
 											<Button href={"shop" + node.fields.slug} className="mr-3" style={{fontSize: "25px"}} variant="primary">Détails</Button>
-											<Button style={{fontSize: "25px"}} variant="danger">Acheter</Button>
+											<Button
+												className='snipcart-add-item'
+												data-item-id={node.frontmatter.id}
+												data-item-price={node.frontmatter.price}
+												data-item-name={node.frontmatter.name}
+												data-item-description={node.frontmatter.description}
+												data-item-image={node.frontmatter.gallery}
+												data-item-url={"https://gatsbycommerce.netlify.com" + node.fields.slug} //REPLACE WITH OWN URL
+												style={{ fontSize: "25px" }} variant="danger">
+												Acheter
+											</Button>
 										</Card.Body>
 									</Col>
 								</Row>
@@ -72,7 +82,17 @@ class Shop extends React.Component {
 													{node.frontmatter.price + " €"}
 												</Card.Text>
 												<Button href={"shop" + node.fields.slug} className="mr-3" style={{fontSize: "25px"}} variant="primary">Détails</Button>
-												<Button style={{fontSize: "25px"}} variant="danger">Acheter</Button>
+												<Button
+												className='snipcart-add-item'
+												data-item-id={node.frontmatter.id}
+												data-item-price={node.frontmatter.price}
+												data-item-name={node.frontmatter.name}
+												data-item-description={node.frontmatter.description}
+												data-item-image={node.frontmatter.gallery}
+												data-item-url={"https://gatsbycommerce.netlify.com" + node.fields.slug} //REPLACE WITH OWN URL
+												style={{ fontSize: "25px" }} variant="danger">
+												Acheter
+											</Button>
 											</Card.Body>
 										</Col>
 									</Row>
