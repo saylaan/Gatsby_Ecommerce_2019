@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Data from "./data"
 
 const ThemeData = Data.Theme;
@@ -46,7 +45,6 @@ class IndexPage extends React.Component {
 	
     	return (
         	<Layout>
-				<p> {ThemeData}</p>
 				<div>{theme}</div>
 			</Layout>     
     	)
