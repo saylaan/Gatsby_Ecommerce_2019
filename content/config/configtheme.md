@@ -1,5 +1,5 @@
 ---
 title: ConfigTheme
 ---
-\#Theme\
+\# Theme\
 theme1
