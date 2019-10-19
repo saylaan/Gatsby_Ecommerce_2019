@@ -2,9 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import Data from "./data"
+import DataBis from "../../content/config/configtheme"
 
-const ThemeData = JSON.stringify(Data.Theme);
+const ThemeData = JSON.stringify(DataBis.configtheme.theme)
 
 class IndexPage extends React.Component {
   	render() {

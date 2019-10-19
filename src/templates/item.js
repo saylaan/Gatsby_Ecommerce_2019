@@ -1,12 +1,10 @@
-
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Card, Button, Col, Row } from "react-bootstrap"
-import Data from "../pages/data"
+import DataBis from "../../content/config/configtheme"
 
-const ThemeData = JSON.stringify(Data.Theme);
-
+const ThemeData = JSON.stringify(DataBis.configtheme.theme)
 class Item extends React.Component {
 	render() {
 		let theme

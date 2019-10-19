@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import { Card, Button, CardGroup, Col, Row } from "react-bootstrap"
-import Data from "./data"
+import DataBis from "../../content/config/configtheme"
 
-const ThemeData = JSON.stringify(Data.Theme);
+const ThemeData = JSON.stringify(DataBis.configtheme.theme)
 
 class Shop extends React.Component {
   	render() {
