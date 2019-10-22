@@ -3,7 +3,6 @@ import Image from "gatsby-image"
 import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
 import { Navbar, Nav, Row, Col } from 'react-bootstrap'
-import NavLink from "react-bootstrap/NavLink"
 
 class NavBar extends React.Component {
 	state = {
@@ -12,31 +11,6 @@ class NavBar extends React.Component {
 
 	updateItemTotal = (qty) => {
 		this.setState({ items: qty })
-	}
-
-	componentDidMount() {
-		if (window.Snipcart) {
-			//this allows it to work when switching pages
-			var count = window.Snipcart.api.items.count();
-			this.updateItemTotal(count)
-
-			//this allows it to work when you add or change items
-			window.Snipcart.subscribe('cart.closed', () => {
-				var count = window.Snipcart.api.items.count();
-				this.updateItemTotal(count)
-			});
-
-			//this allows it to work on refreshing the page
-			window.Snipcart.subscribe('cart.ready', (data) => {
-				var count = window.Snipcart.api.items.count();
-				this.updateItemTotal(count)
-			})
-		}
-	}
-
-	UNSAFE_componentWillMount() {
-		window.Snipcart.unsubscribe('cart.closed');
-		window.Snipcart.unsubscribe('cart.ready');
 	}
 
 	render() {
